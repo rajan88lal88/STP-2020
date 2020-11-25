@@ -5,6 +5,7 @@ let matchFile = require("./match.js");
 
 let dir = "";
 function allMatchHandler(url, folder) {
+  //detects if season folder already exist and creates one
   if (!fs.existsSync(folder)) {
     fs.mkdirSync(folder);
   }

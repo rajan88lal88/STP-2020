@@ -96,6 +96,7 @@ function processPlayer(
     venue,
   };
   let teamPath = team;
+  //detects if country/team folder exist and creates one
   if (!fs.existsSync(path.join(dir, teamPath))) {
     fs.mkdirSync(path.join(dir, teamPath));
   }
