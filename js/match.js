@@ -14,7 +14,7 @@ function matchHandler(url, folder) {
   dir = folder;
   request(url, cb);
 }
-
+//callback function for matchHandler
 function cb(err, header, body) {
   // request is successfully processed
   if (err == null && header.statusCode == 200) {
@@ -30,6 +30,8 @@ function cb(err, header, body) {
     console.log(header);
   }
 }
+
+//extract DOM data from the HTML page
 function parseHtml(body) {
   // parse => $=> selector => element search and bring you that element
   let $ = cheerio.load(body);
